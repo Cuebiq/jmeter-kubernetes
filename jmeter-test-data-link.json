@@ -1,0 +1,27 @@
+{
+  "spec": {
+    "template": {
+      "spec": {
+        "containers": [
+          {
+            "name": "jmslave",
+            "volumeMounts": [
+              {
+                "name": "test-data",
+                "mountPath": "/"
+              }
+            ]
+          }
+        ],
+        "volumes": [
+          {
+            "name": "test-data",
+            "configmap": {
+              "name": "test-data"            }
+          }
+        ]
+      }
+    }
+  }
+}
+
